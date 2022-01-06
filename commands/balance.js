@@ -12,11 +12,10 @@ module.exports = {
 
     if (bal === null) bal = 0;
 
-
     const embed = new Discord.MessageEmbed()
 		.setColor(color.main)
 		.setTitle(`Balance of ${user.tag}`)
-		.addField("Balance", `**${(bal).toLocaleString()} <:DevEvilBot_Coin:867679208855437333>**`)
+		.addField("Balance", `**${(bal).toLocaleString()} <:coin:928775531023978606>**`)
 		.setThumbnail(user.displayAvatarURL({size: 4096, dynamic: true}))
 		return message.channel.send(embed);
 

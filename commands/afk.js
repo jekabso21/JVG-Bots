@@ -25,8 +25,8 @@ module.exports = {
 			.setColor(colors.main)
 			.setDescription(`**You are no longer AFK**`)
 			message.channel.send(user, unmute)
-
-        }, ms(time));
+            
+        }, ms(60*time));
     }
 	
 	

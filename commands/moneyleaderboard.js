@@ -11,7 +11,7 @@ module.exports = {
 		money.length = 10;
 		var finalLb = "";
 		for (var i in money) {
-		  finalLb += `**${money.indexOf(money[i])+1}. <@${client.users.cache.get(money[i].ID.split('_')[1]) ? client.users.cache.get(money[i].ID.split('_')[1]).id : "Unknown User#0000"}>** - **${money[i].data}** <:DevEvilBot_Coin:867679208855437333>\n`;
+		  finalLb += `**${money.indexOf(money[i])+1}. <@${client.users.cache.get(money[i].ID.split('_')[1]) ? client.users.cache.get(money[i].ID.split('_')[1]).id : "Unknown User#0000"}>** - **${money[i].data}** <:coin:928775531023978606>\n`;
 		}
 		const embed = new Discord.MessageEmbed()
 		.setTitle(`Money Leaderboard`, message.guild.iconURL())

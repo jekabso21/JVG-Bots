@@ -31,8 +31,8 @@ module.exports = {
 	
 		let embed = new Discord.MessageEmbed()
 		.setAuthor(`Removed Money`, message.author.displayAvatarURL)
-		.addField(`Amount`, `**${args[0]}** <:DevEvilBot_Coin:867679208855437333>`)
-		.addField(`Balance Updated`, `**${bal}** <:DevEvilBot_Coin:867679208855437333>`)
+		.addField(`Amount`, `**${args[0]}** <:coin:928775531023978606>`)
+		.addField(`Balance Updated`, `**${bal}** <:coin:928775531023978606>`)
 		.setColor(color.main) // random = "RANDOM"
 		.setTimestamp()
 		// you can change it to args[1] if you want to, but then it's not gonna work like I want it to.

@@ -14,9 +14,9 @@ const canva = new CanvasSenpai();
 const pagination = require("discord.js-pagination");
 const ultrax = require("ultrax");
 const activities = [
-  "https://devevilbot.xyz",
+  "http://vgim.jelgava.lv/",
   "Default Prefix : !",
-  "Server : https://discord.gg/jsQ9UP7kCA",
+  "Server : https://discord.gg/kyRsJm3tjY",
   "🐢",
 ];
 

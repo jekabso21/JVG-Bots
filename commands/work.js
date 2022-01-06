@@ -31,7 +31,7 @@ module.exports = {
 		
 				let embed = new Discord.MessageEmbed()
 				.setAuthor(`${message.author.tag}`, message.author.displayAvatarURL) 
-				.setDescription(`**${message.author}, you worked as a bodyguard and got payed ${amount} <:DevEvilBot_Coin:867679208855437333> for protecting your boss**`)
+				.setDescription(`**${message.author}, you worked as a bodyguard and got payed ${amount} <:coin:928775531023978606> for protecting your boss**`)
 				.setColor(color.main)
 				
 			
@@ -47,7 +47,7 @@ module.exports = {
 			
 					let embed = new Discord.MessageEmbed()
 					.setAuthor(`${message.author.tag}`, message.author.displayAvatarURL) 
-					.setDescription(`**${message.author}, you worked as a constructor and got payed ${amount} <:DevEvilBot_Coin:867679208855437333> for rebuilding the burj al khalifa building**`)
+					.setDescription(`**${message.author}, you worked as a constructor and got payed ${amount} <:coin:928775531023978606> for rebuilding the burj al khalifa building**`)
 					.setColor(color.main)
 					
 				
@@ -63,7 +63,7 @@ module.exports = {
 	
 			let embed = new Discord.MessageEmbed()
 			.setAuthor(`${message.author.tag}`, message.author.displayAvatarURL) 
-			.setDescription(`**${message.author}, you worked as a programmer for cd projekt red, you fixed CyberPunk2077 bugs & earned ${amount} <:DevEvilBot_Coin:867679208855437333>**`)
+			.setDescription(`**${message.author}, you worked as a programmer for cd projekt red, you fixed CyberPunk2077 bugs & earned ${amount} <:coin:928775531023978606>**`)
 			.setColor(color.main)
 			 
 		

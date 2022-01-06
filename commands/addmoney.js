@@ -7,6 +7,7 @@ module.exports = {
     name: "add-money",
 
     async run (client, message, args) {
+		if(!message.guild.me.hasPermission("ADMINISTRATOR")) return message.channel.send('<a:no:784463793366761532> **I do not have the correct permissions | Permission : MOVE_MEMBERS**')
 		//let pr = db.get(`premium_${message.author.id}`);
 
 		//if(!pr) {

@@ -29,7 +29,7 @@ module.exports = {
 	
 			message.channel.send(`<a:no:784463793366761532> **You already collected your monthly reward**`)
 		} else {
-			message.channel.send(`<a:yes:784463701305458708> **Great ${message.author.tag} You've been received 5000 DB Coin <:DevEvilBot_Coin:867679208855437333>**`)
+			message.channel.send(`<a:yes:784463701305458708> **Great ${message.author.tag} You've been received 5000 DB Coin <:coin:928775531023978606>**`)
 		db.add(`money_${message.author.id}`, amount)
 		db.set(`monthly_${message.author.id}`, Date.now())
 			

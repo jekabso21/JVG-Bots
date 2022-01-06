@@ -38,7 +38,7 @@ module.exports = {
 			} else {
 				db.add(`money_${message.author.id}`, amount)
 	        	db.set(`daily_${message.author.id}`, Date.now())
-				return message.channel.send(`<a:yes:784463701305458708> **Great ${message.author.tag} You've been received 500 DB Coin <:DevEvilBot_Coin:867679208855437333>**`);
+				return message.channel.send(`<a:yes:784463701305458708> **Great ${message.author.tag} You've been received 500 DB Coin <:coin:928775531023978606>**`);
 			}
 	
 		} catch (error) {

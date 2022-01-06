@@ -26,7 +26,7 @@ module.exports = {
 
         let Embed = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription(`**You need 25,000 <:DevEvilBot_Coin:867679208855437333> to purchase Shovel**`);
+            .setDescription(`**You need 25,000 <:coin:928775531023978606> to purchase Shovel**`);
 
 
         if (args.join(' ').toLocaleLowerCase() == 'shovel') {
@@ -37,7 +37,7 @@ module.exports = {
 
             let Embed2 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Shovel For 25,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Shovel For 25,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886183063757918258/ae235.jpg');
 
             db.subtract(`money_${user.id}`, 25000)
@@ -45,7 +45,7 @@ module.exports = {
         } else if (args.join(' ').toLocaleLowerCase() == 'fishing pole') {
             let Embed3 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 25,000 <:DevEvilBot_Coin:867679208855437333> to purchase Fishing Pole**`);
+                .setDescription(`**You need 25,000 <:coin:928775531023978606> to purchase Fishing Pole**`);
 
             if (author < 25000) return message.channel.send(Embed3)
 
@@ -54,7 +54,7 @@ module.exports = {
 
             let Embed4 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Fishing Pole For 25000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Fishing Pole For 25000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886183143353229333/060420-cottage-dock-fishing-fish-sportfishing-adobestock_242597321.jpeg')
 
             db.subtract(`money_${user.id}`, 25000)
@@ -62,7 +62,7 @@ module.exports = {
         } else if (args.join(' ').toLocaleLowerCase() == 'headphone') {
             let Embed5 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 50,000 <:DevEvilBot_Coin:867679208855437333> to purchase Headphone**`);
+                .setDescription(`**You need 50,000 <:coin:928775531023978606> to purchase Headphone**`);
 
             if (author < 50000) return message.channel.send(Embed5)
 
@@ -71,7 +71,7 @@ module.exports = {
 
             let Embed6 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Headphone For 50,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Headphone For 50,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886183074176581643/razer-nari-category-500x500.jpg')
 
             db.subtract(`money_${message.guild.id}_${user.id}`, 50000)
@@ -79,7 +79,7 @@ module.exports = {
         } else if (args.join(' ').toLocaleLowerCase() == 'cell phone') {
             let Embed7 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 120,000 <:DevEvilBot_Coin:867679208855437333> to purchase Cell Phone**`)
+                .setDescription(`**You need 120,000 <:coin:928775531023978606> to purchase Cell Phone**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886183105927479386/iphone12promax-2-scaled.jpg')
 
             if (author < 120000) return message.channel.send(Embed7)
@@ -89,7 +89,7 @@ module.exports = {
 
             let Embed8 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Cell Phone For 120,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Cell Phone For 120,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 120000)
             message.channel.send(Embed8)
@@ -97,7 +97,7 @@ module.exports = {
 		} else if (args.join(' ').toLocaleLowerCase() == 'laptop') {
             let Embed9 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 200,000 <:DevEvilBot_Coin:867679208855437333> to purchase laptop**`)
+                .setDescription(`**You need 200,000 <:coin:928775531023978606> to purchase laptop**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886183101905129552/Untitled-design-24.jpg')
 
             if (author < 200000) return message.channel.send(Embed9)
@@ -107,14 +107,14 @@ module.exports = {
 
             let Embed10 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Laptop For 200,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Laptop For 200,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 200000)
             message.channel.send(Embed10)
 		} else if (args.join(' ').toLocaleLowerCase() == 'db coin') {
             let Embed11 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 1,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase DB Coin**`);
+                .setDescription(`**You need 1,000,000 <:coin:928775531023978606> to purchase DB Coin**`);
 
             if (author < 1000000) return message.channel.send(Embed11)
 
@@ -122,14 +122,14 @@ module.exports = {
 
             let Embed12 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased DB Coin For 1,000,000 <:DevEvilBot_Coin:867679208855437333>\nSend amount of coins you need to DevEvil#8745 to be added to your account**`);
+                .setDescription(`**Purchased DB Coin For 1,000,000 <:coin:928775531023978606>\nSend amount of coins you need to DevEvil#8745 to be added to your account**`);
 
             db.subtract(`money_${user.id}`, 1000000)
             message.channel.send(Embed12)
 		} else if (args.join(' ').toLocaleLowerCase() == 'pistol') {
             let Embed13 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 350,000 <:DevEvilBot_Coin:867679208855437333> to purchase Pistol**`);
+                .setDescription(`**You need 350,000 <:coin:928775531023978606> to purchase Pistol**`);
 
             if (author < 350000) return message.channel.send(Embed13)
 
@@ -138,7 +138,7 @@ module.exports = {
 
             let Embed14 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Pistol For 350,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Pistol For 350,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180665031262208/Profile-Left-sm-1024x683-1024x683.jpg')
 
             db.subtract(`money_${user.id}`, 350000)
@@ -146,7 +146,7 @@ module.exports = {
 		} else if (args.join(' ').toLocaleLowerCase() == 'rifle') {
             let Embed15 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 650,000 <:DevEvilBot_Coin:867679208855437333> to purchase Rifle**`);
+                .setDescription(`**You need 650,000 <:coin:928775531023978606> to purchase Rifle**`);
 
             if (author < 650000) return message.channel.send(Embed15)
 
@@ -155,7 +155,7 @@ module.exports = {
 
             let Embed16 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Rifle For 650,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Rifle For 650,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180674736902204/d269f9a104efc67c98c2014f323a41af_1.jpg')
 
             db.subtract(`money_${user.id}`, 650000)
@@ -163,7 +163,7 @@ module.exports = {
 		} else if (args.join(' ').toLocaleLowerCase() == 'sniper') {
             let Embed17 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 700,000 <:DevEvilBot_Coin:867679208855437333> to purchase Sniper**`);
+                .setDescription(`**You need 700,000 <:coin:928775531023978606> to purchase Sniper**`);
 
             if (author < 700000) return message.channel.send(Embed17)
 
@@ -172,7 +172,7 @@ module.exports = {
 
             let Embed18 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Sniper For 700,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Sniper For 700,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180672455188480/b0de9445fed5ceca9fb337bddba2d73a.jpg')
 
             db.subtract(`money_${user.id}`, 700000)
@@ -181,7 +181,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'shotgun') {
             let Embed20 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 700,000 <:DevEvilBot_Coin:867679208855437333> to purchase Shotgun**`);
+                .setDescription(`**You need 700,000 <:coin:928775531023978606> to purchase Shotgun**`);
 
             if (author < 700000) return message.channel.send(Embed20)
 
@@ -190,7 +190,7 @@ module.exports = {
 
             let Embed21 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Shotgun For 700,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Shotgun For 700,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180670089596958/engraved-shotguns-too-beautiful-to-shoot-20201007-1003-716x1024.jpg')
 
             db.subtract(`money_${user.id}`, 700000)
@@ -199,7 +199,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'ghost') {
             let Embed22 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 1,500,000 <:DevEvilBot_Coin:867679208855437333> to purchase Ghost**`);
+                .setDescription(`**You need 1,500,000 <:coin:928775531023978606> to purchase Ghost**`);
 
             if (author < 1500000) return message.channel.send(Embed22)
 
@@ -208,7 +208,7 @@ module.exports = {
 
             let Embed23 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Ghost For 1,500,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Ghost For 1,500,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 1500000)
             message.channel.send(Embed23)
@@ -216,7 +216,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'ninja') {
             let Embed24 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 2,500,000 <:DevEvilBot_Coin:867679208855437333> to purchase Ninja**`);
+                .setDescription(`**You need 2,500,000 <:coin:928775531023978606> to purchase Ninja**`);
 
             if (author < 2500000) return message.channel.send(Embed24)
 
@@ -225,7 +225,7 @@ module.exports = {
 
             let Embed25 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Ninja For 2,500,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Ninja For 2,500,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 2500000)
             message.channel.send(Embed25)
@@ -233,7 +233,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'mind reading') {
             let Embed26 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 5,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Mind Reading**`);
+                .setDescription(`**You need 5,000,000 <:coin:928775531023978606> to purchase Mind Reading**`);
 
             if (author < 5000000) return message.channel.send(Embed26)
 
@@ -242,7 +242,7 @@ module.exports = {
 
             let Embed27 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Mind Reading For 5,000,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Mind Reading For 5,000,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 5000000)
             message.channel.send(Embed27)
@@ -250,7 +250,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'invisible') {
             let Embed28 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 15,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Invisible**`);
+                .setDescription(`**You need 15,000,000 <:coin:928775531023978606> to purchase Invisible**`);
 
             if (author < 15000000) return message.channel.send(Embed28)
 
@@ -259,7 +259,7 @@ module.exports = {
 
             let Embed29 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Invisible For 15,000,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Invisible For 15,000,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 15000000)
             message.channel.send(Embed29)
@@ -267,7 +267,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'copper') {
             let Embed30 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 200,000 <:DevEvilBot_Coin:867679208855437333> to purchase Copper**`);
+                .setDescription(`**You need 200,000 <:coin:928775531023978606> to purchase Copper**`);
 
             if (author < 200000) return message.channel.send(Embed30)
 
@@ -276,7 +276,7 @@ module.exports = {
 
             let Embed31 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Copper For 200,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Copper For 200,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 2000000)
             message.channel.send(Embed31)
@@ -284,7 +284,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'bronze') {
             let Embed32 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 1,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Bronze**`);
+                .setDescription(`**You need 1,000,000 <:coin:928775531023978606> to purchase Bronze**`);
 
             if (author < 1000000) return message.channel.send(Embed32)
 
@@ -293,7 +293,7 @@ module.exports = {
 
             let Embed33 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Bronze For 1,000,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Bronze For 1,000,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 1000000)
             message.channel.send(Embed33)
@@ -301,7 +301,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'silver') {
             let Embed34 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 2,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Silver**`);
+                .setDescription(`**You need 2,000,000 <:coin:928775531023978606> to purchase Silver**`);
 
             if (author < 2000000) return message.channel.send(Embed34)
 
@@ -310,7 +310,7 @@ module.exports = {
 
             let Embed35 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Silver For 2,000,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Silver For 2,000,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 2000000)
             message.channel.send(Embed35)
@@ -318,7 +318,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'gold') {
             let Embed36 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 3,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Gold**`);
+                .setDescription(`**You need 3,000,000 <:coin:928775531023978606> to purchase Gold**`);
 
             if (author < 3000000) return message.channel.send(Embed36)
 
@@ -327,7 +327,7 @@ module.exports = {
 
             let Embed37 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Gold For 3,000,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Gold For 3,000,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 3000000)
             message.channel.send(Embed37)
@@ -335,7 +335,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'diamond') {
             let Embed38 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 5,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Diamond**`);
+                .setDescription(`**You need 5,000,000 <:coin:928775531023978606> to purchase Diamond**`);
 
             if (author < 5000000) return message.channel.send(Embed38)
 
@@ -344,7 +344,7 @@ module.exports = {
 
             let Embed39 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Diamond For 5,000,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Diamond For 5,000,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 5000000)
             message.channel.send(Embed39)
@@ -352,7 +352,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'immortal') {
             let Embed40 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 10,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Immortal**`);
+                .setDescription(`**You need 10,000,000 <:coin:928775531023978606> to purchase Immortal**`);
 
             if (author < 10000000) return message.channel.send(Embed40)
 
@@ -361,7 +361,7 @@ module.exports = {
 
             let Embed41 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Immortal For 10,000,000 <:DevEvilBot_Coin:867679208855437333>**`);
+                .setDescription(`**Purchased Immortal For 10,000,000 <:coin:928775531023978606>**`);
 
             db.subtract(`money_${user.id}`, 10000000)
             message.channel.send(Embed41)
@@ -369,7 +369,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'turtle') {
             let Embed43 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 1,700 <:DevEvilBot_Coin:867679208855437333> to purchase Turtle**`);
+                .setDescription(`**You need 1,700 <:coin:928775531023978606> to purchase Turtle**`);
 
             if (author < 1700) return message.channel.send(Embed43)
 
@@ -378,7 +378,7 @@ module.exports = {
 
             let Embed44 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Turtle For 1,700 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Turtle For 1,700 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886182212674936862/2326.jpg')
 
             db.subtract(`money_${user.id}`, 1700)
@@ -386,7 +386,7 @@ module.exports = {
         } else if (args.join(' ').toLocaleLowerCase() == 'bird') {
             let Embed45 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 2,000 <:DevEvilBot_Coin:867679208855437333> to purchase Bird**`);
+                .setDescription(`**You need 2,000 <:coin:928775531023978606> to purchase Bird**`);
 
             if (author < 2000) return message.channel.send(Embed45)
 
@@ -395,7 +395,7 @@ module.exports = {
 
             let Embed46 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Bird For 2,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Bird For 2,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/468141324906921984/886185398412402688/download.jpg')
 
             db.subtract(`money_${user.id}`, 2000)
@@ -403,7 +403,7 @@ module.exports = {
         } else if (args.join(' ').toLocaleLowerCase() == 'cat') {
             let Embed47 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 5,000 <:DevEvilBot_Coin:867679208855437333> to purchase Cat**`);
+                .setDescription(`**You need 5,000 <:coin:928775531023978606> to purchase Cat**`);
 
             if (author < 5000) return message.channel.send(Embed47)
 
@@ -412,7 +412,7 @@ module.exports = {
 
             let Embed48 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Cat For 5,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Cat For 5,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886182215724175400/AWQQ-1080x675.jpg')
 
             db.subtract(`money_${user.id}`, 5000)
@@ -420,7 +420,7 @@ module.exports = {
         } else if (args.join(' ').toLocaleLowerCase() == 'dog') {
             let Embed49 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 5,500 <:DevEvilBot_Coin:867679208855437333> to purchase Dog**`);
+                .setDescription(`**You need 5,500 <:coin:928775531023978606> to purchase Dog**`);
 
             if (author < 5500) return message.channel.send(Embed49)
 
@@ -429,7 +429,7 @@ module.exports = {
 
             let Embed50 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Dog For 5,500 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Dog For 5,500 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886182218794414100/0fe5f8fd54b6a7fdb5c98658ab752329.jpg')
 
             db.subtract(`money_${user.id}`, 5500)
@@ -438,7 +438,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'snake') {
             let Embed51 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 10,000 <:DevEvilBot_Coin:867679208855437333> to purchase Snake**`);
+                .setDescription(`**You need 10,000 <:coin:928775531023978606> to purchase Snake**`);
 
             if (author < 10000) return message.channel.send(Embed51)
 
@@ -447,7 +447,7 @@ module.exports = {
 
             let Embed52 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Snake For 10,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Snake For 10,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886182213861908480/Snake-header.jpg')
 
             db.subtract(`money_${user.id}`, 10000)
@@ -456,7 +456,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'tesla') {
             let Embed53 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 3,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Tesla**`);
+                .setDescription(`**You need 3,000,000 <:coin:928775531023978606> to purchase Tesla**`);
 
             if (author < 3000000) return message.channel.send(Embed53)
 
@@ -465,7 +465,7 @@ module.exports = {
 
             let Embed54 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Tesla For 3,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Tesla For 3,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180564648984626/2017-Tesla-Model-S-P100D-white-sedan-Max-Klamus-1001x565-1_1_0-1024x578.jpg')
 
             db.subtract(`money_${user.id}`, 3000000)
@@ -473,7 +473,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'ferrari') {
             let Embed55 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 5,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Ferrari**`);
+                .setDescription(`**You need 5,000,000 <:coin:928775531023978606> to purchase Ferrari**`);
 
             if (author < 5000000) return message.channel.send(Embed55)
 
@@ -482,7 +482,7 @@ module.exports = {
 
             let Embed56 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Ferrari For 5,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Ferrari For 5,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180636807802950/Novitec_Ferrari_SF90_Stradale.jpg')
 
             db.subtract(`money_${user.id}`, 5000000)
@@ -490,7 +490,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'bugatti') {
             let Embed57 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 8,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Bugatti**`);
+                .setDescription(`**You need 8,000,000 <:coin:928775531023978606> to purchase Bugatti**`);
 
             if (author < 8000000) return message.channel.send(Embed57)
 
@@ -499,7 +499,7 @@ module.exports = {
 
             let Embed58 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Bugatti For 8,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Bugatti For 8,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180652725194762/bugatti-la-voiture-noire_100794247.jpg')
 
             db.subtract(`money_${user.id}`, 8000000)
@@ -507,7 +507,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'lamborghini') {
             let Embed59 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 12,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Lamborghini**`);
+                .setDescription(`**You need 12,000,000 <:coin:928775531023978606> to purchase Lamborghini**`);
 
             if (author < 12000000) return message.channel.send(Embed59)
 
@@ -516,7 +516,7 @@ module.exports = {
 
             let Embed60 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Lamborghini For 12,000,00 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Lamborghini For 12,000,00 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180647150944266/carpixel.net-2014-lamborghini-veneno-roadster-97625-hd.jpg')
 
             db.subtract(`money_${user.id}`, 12000000)
@@ -524,7 +524,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'mercedes-benz') {
             let Embed61 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 15,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Mercedes-Benz**`);
+                .setDescription(`**You need 15,000,000 <:coin:928775531023978606> to purchase Mercedes-Benz**`);
 
             if (author < 15000000) return message.channel.send(Embed61)
 
@@ -533,7 +533,7 @@ module.exports = {
 
             let Embed62 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Mercedes-Benz For 15,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Mercedes-Benz For 15,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180713681018900/db138bea04216cc59bbb3413f29d1c42.jpg')
 
             db.subtract(`money_${user.id}`, 15000000)
@@ -542,7 +542,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'rolls-royce') {
             let Embed63 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 20,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Rolls-Royce**`);
+                .setDescription(`**You need 20,000,000 <:coin:928775531023978606> to purchase Rolls-Royce**`);
 
             if (author < 20000000) return message.channel.send(Embed63)
 
@@ -551,7 +551,7 @@ module.exports = {
 
             let Embed64 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Rolls-Royce For 20,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Rolls-Royce For 20,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/804288026401964042/886180640825954304/rolls-royce-sweptail-at-villa-deste.jpg')
 
             db.subtract(`money_${user.id}`, 20000000)
@@ -560,7 +560,7 @@ module.exports = {
         else if (args.join(' ').toLocaleLowerCase() == 'apartment') {
             let Embed65 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 10,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Apartment**`);
+                .setDescription(`**You need 10,000,000 <:coin:928775531023978606> to purchase Apartment**`);
 
             if (author < 10000000) return message.channel.send(Embed65)
 
@@ -569,7 +569,7 @@ module.exports = {
 
             let Embed66 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Apartment For 10,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Apartment For 10,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/468141324906921984/886687417912926238/apartment.jpg')
 
             db.subtract(`money_${user.id}`, 10000000)
@@ -577,7 +577,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'villa') {
             let Embed67 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 15,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Villa**`);
+                .setDescription(`**You need 15,000,000 <:coin:928775531023978606> to purchase Villa**`);
 
             if (author < 15000000) return message.channel.send(Embed67)
 
@@ -586,7 +586,7 @@ module.exports = {
 
             let Embed68 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Villa For 15,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Villa For 15,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/468141324906921984/886687433566060554/villa.jpg')
 
             db.subtract(`money_${user.id}`, 15000000)
@@ -594,7 +594,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'ocean view') {
             let Embed69 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 20,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Ocean View**`);
+                .setDescription(`**You need 20,000,000 <:coin:928775531023978606> to purchase Ocean View**`);
 
             if (author < 20000000) return message.channel.send(Embed69)
 
@@ -603,7 +603,7 @@ module.exports = {
 
             let Embed70 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Ocean View House For 20,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Ocean View House For 20,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/468141324906921984/886687456039174235/ocean_view.jpg')
 
             db.subtract(`money_${user.id}`, 20000000)
@@ -611,7 +611,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'mansion') {
             let Embed71 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 30,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Mansion**`);
+                .setDescription(`**You need 30,000,000 <:coin:928775531023978606> to purchase Mansion**`);
 
             if (author < 30000000) return message.channel.send(Embed71)
 
@@ -620,7 +620,7 @@ module.exports = {
 
             let Embed72 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Mansion For 30,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Mansion For 30,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/468141324906921984/886687736336113685/mansion.jpg')
 
             db.subtract(`money_${user.id}`, 30000000)
@@ -628,7 +628,7 @@ module.exports = {
         }else if (args.join(' ').toLocaleLowerCase() == 'castle') {
             let Embed73 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**You need 50,000,000 <:DevEvilBot_Coin:867679208855437333> to purchase Castle**`);
+                .setDescription(`**You need 50,000,000 <:coin:928775531023978606> to purchase Castle**`);
 
             if (author < 50000000) return message.channel.send(Embed73)
 
@@ -637,7 +637,7 @@ module.exports = {
 
             let Embed74 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased Castle For 50,000,000 <:DevEvilBot_Coin:867679208855437333>**`)
+                .setDescription(`**Purchased Castle For 50,000,000 <:coin:928775531023978606>**`)
                 .setImage('https://cdn.discordapp.com/attachments/468141324906921984/886689701950545930/castle.jpg')
 
             db.subtract(`money_${user.id}`, 50000000)

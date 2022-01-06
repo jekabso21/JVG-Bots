@@ -93,7 +93,7 @@ module.exports = {
 		.addField('Level', `**${levelfetch || 0}**`, true)
 		.addField('Rank', `**${place + 1}**`, true)
 		.addField('Current XP', `**${rankMsg}**`, true)
-		.addField('Money', `**${(bal).toLocaleString()} <:DevEvilBot_Coin:867679208855437333>**`, true)
+		.addField('Money', `**${(bal).toLocaleString()} <:coin:928775531023978606>**`, true)
 		.addField('Items', `**Shovel : ${shovel}\nFishing Pole : ${fishing_pole}\nHeadphone : ${headphone}\nCell Phone : ${cell_phone}\nLaptop : ${laptop}**`, true)
 		.addField('Pets', `**Turtle : ${turtle}\nBird : ${bird}\nCat : ${cat}\nDog : ${dog}\nSnake : ${snake}**`, true)
 		.addField('Guns', `**Pistol : ${pistol}\nRifle : ${rifle}\nSniper : ${sniper}\nShotgun : ${shotgun}**`, true)
