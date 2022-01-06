@@ -7,7 +7,7 @@ Ja vēlies nomainit botu uz kā šis code darbosies tad ej uz congig.json un izm
 Ja vēlies izmantot manu code vismaz ieliec mani creditos par to ka uztaisīju 67% no visa šī sūda code.
 
 # Installation ⚙
-- ``git clone https://github.com/DevEvil99/DevEvilBot-Discord-Bot``
+- ``git clone https://github.com/jekabso21/JVG-Bots.git``
 - **Fill** ``config.json``
 - ``cd DevEvilBot-Discord-Bot``
 - ``npm i``
