@@ -9,7 +9,7 @@ Ja vēlies izmantot manu code vismaz ieliec mani creditos par to ka uztaisīju 6
 # Installation ⚙
 - ``git clone https://github.com/jekabso21/JVG-Bots.git``
 - **Fill** ``config.json``
-- ``cd DevEvilBot-Discord-Bot``
+- ``cd JVG-Bots``
 - ``npm i``
-- ``node .`` or ``node index.js``
+- ``node .`` or ``node index.js`` vai viss labāl ``npm run dev``
 
