@@ -2,6 +2,8 @@ const color = require('../colors.json')
 const Discord = require('discord.js');
 const db = require('quick.db')
 const { token, default_prefix } = require('../config.json');
+const { Collection, Client } = require("discord.js");
+const client = new Discord.Client({ disableEveryone: true , fetchAllMembers: true, partials: ['MESSAGE', 'CHANNEL', 'REACTION']});
 
 module.exports = {
     name: "warn",

@@ -14,6 +14,7 @@ const canva = new CanvasSenpai();
 const pagination = require("discord.js-pagination");
 const ultrax = require("ultrax");
 const ms = require("ms");
+
 const activities = [
   "http://vgim.jelgava.lv/",
   "Default Prefix : !",
@@ -547,66 +548,68 @@ if(!role) return;
 })
 
 
-const database = require('quick.db')
+
 client.on('message', async message => {  
     if(message.author.bot) return;
     if(!message.guild) return;
-    let blacklisted = ['nigg', 'nig', 'autist', 'asd'];
+    let blacklisted = ['nigg', 'nig', 'autist', 'loh', 'padauz', 'pimp', 'pipel'];
     let foundInText = false;
-    // get user nickname
-    //let nickname = message.member.displayName;
-    // tag the player and warn for spam
     var embedColor = '0x5D40F2' 
-    const user = message.member.displayName;
+    const user = message.author.username;
+    const userid = message.author.id
+    // IF youre admin then retrun
+    if(message.member.hasPermission("ADMINISTRATOR")) return;
     for (var i in blacklisted) {
       if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
     }
     if (foundInText) {
       message.delete();
-      let warnings = database.get(`warnings_${message.guild.id}_${user.id}`);
+      let warnings = db.get(`warnings_${message.guild.id}_${userid}`);
 	  
 		  if (warnings === null) {
-			db.set(`warnings_${message.guild.id}_${user.id}`, 1);
+			db.set(`warnings_${message.guild.id}_${userid}`, 1);
 			var warningEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
 			.setAuthor(message.author.username, message.author.avatarURL)
 			.setTitle(`**You've been warned in ${message.guild.name}**`)
-			.addField('Warned by', `**${message.author.tag}**`)
+			.addField('Warned by')
 			.addField('Reason', `For useing blacklisted words`)
 			.setTimestamp();
-			user.send(warningEmbed);
+        user.send(warningEmbed);
+
+			
 
 			var warnSuccessfulEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
 			.setDescription(`<a:yes:784463701305458708> **User Successfully Warned**`)
-			.addField('Warned by', `${message.author}`)
+			.addField('Warned by BOT')
 			.addField('Reason', `For useing blacklisted words`)
-			let mChannel = database.fetch(`modlog_${message.guild.id}`)
+			let mChannel = db.fetch(`modlog_${message.guild.id}`)
 		    if(!mChannel) return message.channel.send(warnSuccessfulEmbed)
 		    let warnChannel = message.guild.channels.cache.get(mChannel)
 		    if(!warnChannel) return;
 		    warnChannel.send(warnSuccessfulEmbed)
 		  } else if(warnings !== null) {
 			
-			db.add(`warnings_${message.guild.id}_${user.id}`, 1);
+			db.add(`warnings_${message.guild.id}_${userid}`, 1);
 			
 			var warningEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
 			.setAuthor(message.author.username, message.author.avatarURL)
 			.setTitle(`**You've been warned in ${message.guild.name}**`)
-			.addField('Warned by', `**${message.author.tag}**`)
+			.addField('Warned by BOT')
 			.addField('Reason', `For useing blacklisted words`)
 			.setTimestamp();
 			message.author.send(warningEmbed);
 			
 			var warnSuccessfulEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
-			.setDescription(`<a:yes:784463701305458708> **User Successfully Warned**`)
-			.addField('Warned by', `${message.author}`)
+			.setDescription(`✅ **User Successfully Warned**`)
+			.addField('Warned by BOT')
 			.addField('Reason', `For using blacklisted words`)
 
 		    message.delete(); 
-		    let mChannel = database.fetch(`modlog_${message.guild.id}`)
+		    let mChannel = db.fetch(`modlog_${message.guild.id}`)
 		    if(!mChannel) return message.channel.send(warnSuccessfulEmbed)
 		    let warnChannel = message.guild.channels.cache.get(mChannel)
 		    if(!warnChannel) return;
