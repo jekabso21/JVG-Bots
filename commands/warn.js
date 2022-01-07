@@ -9,29 +9,29 @@ module.exports = {
     async run (client, message, args) {
 		var embedColor = '0x5D40F2' 
 		
-		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('<a:no:784463793366761532> **You can not use this command | Permission: ADMINISTRATOR**')
-		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<a:no:784463793366761532> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
+		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('❌ **You can not use this command | Permission: ADMINISTRATOR**')
+		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('❌ **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
 		
 	  
 		  const user = message.mentions.members.first();
 	  
 		  if (!user) {
 			return message.channel.send(
-			  "<a:no:784463793366761532> **Please mention a user**"
+			  "❌ **Please mention a user**"
 			);
 		  }
 	  
 		  if (message.mentions.users.first().bot) {
-			return message.channel.send("<a:no:784463793366761532> **You can not warn bots**");
+			return message.channel.send("❌ **You can not warn bots**");
 		  }
 	  
 		  if (message.author.id === user.id) {
-			return message.channel.send("<a:no:784463793366761532> **You can not warn yourself -_-**");
+			return message.channel.send("❌ **You can not warn yourself -_-**");
 		  }
 	  
 		  if (user.id === message.guild.owner.id) {
 			return message.channel.send(
-			  "<a:no:784463793366761532> **Bruh, you can not warn server owner -_-**"
+			  "❌ **Bruh, you can not warn server owner -_-**"
 			);
 		  }
 	  
@@ -39,11 +39,11 @@ module.exports = {
 	  
 		  if (!reason) {
 			return message.channel.send(
-			  "<a:no:784463793366761532> **Please provide reason to warn**"
+			  "❌ **Please provide reason to warn**"
 			);
 		  }
 
-		  message.react('<a:yes:784463701305458708>')
+		  message.react('✅')
 	  
 		  let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
 	  
@@ -60,7 +60,7 @@ module.exports = {
 
 			var warnSuccessfulEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
-			.setDescription(`<a:yes:784463701305458708> **User Successfully Warned**`)
+			.setDescription(`✅ **User Successfully Warned**`)
 			.addField('Warned by', `${message.author}`)
 			.addField('Reason', `**${reason}**`)
 			let mChannel = db.fetch(`modlog_${message.guild.id}`)
@@ -83,7 +83,7 @@ module.exports = {
 			
 			var warnSuccessfulEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
-			.setDescription(`<a:yes:784463701305458708> **User Successfully Warned**`)
+			.setDescription(`✅ **User Successfully Warned**`)
 			.addField('Warned by', `${message.author}`)
 			.addField('Reason', `**${reason}**`)
 
