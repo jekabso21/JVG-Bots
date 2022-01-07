@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const { Collection, Client } = require("discord.js");
-const { token, default_prefix } = require("./config.json");
+const { token, default_prefix, youtube_api_key } = require("./config.json");
 const config = require("./config.json");
 const colors = require("./colors.json");
 const { red, green, blue} = require('chalk');
@@ -547,12 +547,29 @@ if(!role) return;
 }
 })
 
+//if user say let the debuging begin respond with hell yeah
+//little shit
+client.on('message', async message => {
+  if(message.author.bot) return;
+  if(message.content.toLowerCase() == 'let the debugging begin') {
+    let embed = new Discord.MessageEmbed()
+    .setAuthor(message.author.username, message.author.displayAvatarURL())
+    .setDescription(`<a:yes:784463701305458708> **Hell Yeah!**`)
+    .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+    .setColor(colors.main)
+    message.channel.send(embed)
+  }
+})
 
+
+
+
+//Word filtering
 
 client.on('message', async message => {  
     if(message.author.bot) return;
     if(!message.guild) return;
-    let blacklisted = ['nigg', 'nig', 'autist', 'loh', 'padauz', 'pimp', 'pipel'];
+    let blacklisted = ['nigg', 'nig', 'autist', 'loh', 'padauz', 'pimp', 'pipele'];
     let foundInText = false;
     var embedColor = '0x5D40F2' 
     const user = message.author.username;
@@ -619,5 +636,35 @@ client.on('message', async message => {
     }
   }
 });
+
+
+//check in instagram for new posts and send them to the channel
+// if superagent is not defind then download package called superagent like this 
+// npm i superagent
+client.on('message', async message => {
+  if(message.author.bot) return;
+  if(message.content.toLowerCase() == 'check instagram') {
+    let embed = new Discord.MessageEmbed()
+    .setAuthor(message.author.username, message.author.displayAvatarURL())
+    .setDescription(`<a:yes:784463701305458708> **Checking Instagram**`)
+    .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+    .setColor(colors.main)
+    message.channel.send(embed)
+    const { body } = await superagent
+    .get('https://www.instagram.com/p/B-_9j-jBX-U/')
+    .catch(err => {
+      console.log(err)
+    })
+    let embed2 = new Discord.MessageEmbed()
+    .setAuthor(message.author.username, message.author.displayAvatarURL())
+    .setDescription(`<a:yes:784463701305458708> **Checking Instagram**`)
+    .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+    .setColor(colors.main)
+    .setImage(body.link)
+    message.channel.send(embed2)
+  }
+})
+
+
 
 client.login(token);
