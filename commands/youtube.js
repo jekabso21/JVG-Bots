@@ -1,5 +1,2 @@
-//make a command that plays music in a voice channel
-// 			.addField('Reason', `${reason}`)
-
-
+//Create function thet check if there is new video in tvkaste youtube chanel and send it to discord channel 
 

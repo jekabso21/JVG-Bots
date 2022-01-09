@@ -13,7 +13,7 @@ module.exports = {
 		let bug = messageArry.join(" ").slice(0);
 		let user = message.author.tag;
 		let guild = message.guild.name;
-		let channel = client.channels.cache.get("844622744011800636")
+		let channel = client.channels.cache.get("928700058231242754")
 		const embed = new Discord.MessageEmbed()
 		.setTitle("Bug Report")
 		.addField("Bug", `**${bug}**`)
@@ -21,7 +21,7 @@ module.exports = {
         .addField("Reported in", `**${guild}**`)
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		.setColor(colors.main)
-		message.channel.send(`<a:yes:784463701305458708> **Your bug has been reported in the official server. It will be reviewed so please be patient | Type \`${prefix}server\` for join to our server**`)
+		message.channel.send(`<a:yes:784463701305458708> **Your bug has been reported in the official server. It will be reviewed so please be patient**`)
 		channel.send(embed)
 	}
 }

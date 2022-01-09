@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const { Collection, Client } = require("discord.js");
-const { token, default_prefix, youtube_api_key } = require("./config.json");
+const { token, default_prefix,  } = require("./config.json");
 const config = require("./config.json");
 const colors = require("./colors.json");
 const { red, green, blue} = require('chalk');
@@ -14,6 +14,7 @@ const canva = new CanvasSenpai();
 const pagination = require("discord.js-pagination");
 const ultrax = require("ultrax");
 const ms = require("ms");
+const YoutubePoster = require("discord-yt-poster");
 
 const activities = [
   "http://vgim.jelgava.lv/",
@@ -78,6 +79,8 @@ console.log(blue(DevEvil));
 
     client.user.setActivity(newActivity);
   }, 10000);
+  client.YTP = new YoutubePoster(client);
+  //handleUploads();
 });
 
 client.on('error', console.error)
@@ -156,6 +159,7 @@ for (const file of commandFiles) {
 }
 
 client.on("message", async (message) => {
+
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
 
@@ -561,16 +565,36 @@ client.on('message', async message => {
   }
 })
 
+/* 
+function handleUploads() {
+  if (db.fetch(`postedVideos`) === null) db.set(`postedVideos`, []);
+  setInterval(() => {
+      client.request.parseURL(`https://www.youtube.com/feeds/videos.xml?channel_id=${"UCJETI_xP7vLaLOxd0b7Raew"}`)
+      .then(data => {
+          if (db.fetch(`postedVideos`).includes(data.items[0].link)) return;
+          else {
+              db.set(`videoData`, data.items[0]);
+              db.push("postedVideos", data.items[0].link);
+              let parsed = db.fetch(`videoData`);
+              let channel = client.channels.cache.get(client.config.channel);
+              if (!channel) return;
+              let message = client.config.messageTemplate
+                  .replace(/{author}/g, parsed.author)
+                  .replace(/{title}/g, Discord.Util.escapeMarkdown(parsed.title))
+                  .replace(/{url}/g, parsed.link);
+              channel.send(message);
+          }
+      });
+  }, 3000);
+} */
 
 
-
-//Word filtering
 
 client.on('message', async message => {  
     if(message.author.bot) return;
     if(!message.guild) return;
     let blacklisted = ['nigg', 'nig', 'autist', 'loh', 'padauz', 'pimp', 'pipele'];
-    let foundInText = false;
+    let foundInText = true;
     var embedColor = '0x5D40F2' 
     const user = message.author.username;
     const userid = message.author.id
@@ -631,40 +655,86 @@ client.on('message', async message => {
 		    let warnChannel = message.guild.channels.cache.get(mChannel)
 		    if(!warnChannel) return;
 		    warnChannel.send(warnSuccessfulEmbed)
-			
+			// if player has 3 warnings then ban them
+      if(warnings == 5) {
+        let banEmbed = new Discord.MessageEmbed()
+        .setColor(embedColor)
+        .setAuthor(message.author.username, message.author.avatarURL)
+        .setTitle(`**You've been banned in ${message.guild.name}**`)
+        .addField('Banned by BOT')
+        .addField('Reason', `For useing blacklisted words`)
+        .setTimestamp();
+        message.author.send(banEmbed);
+        message.guild.members.ban(message.author.id, { reason: 'For useing blacklisted words' });
+      }
 			
     }
   }
 });
 
+//Log Message
+client.on("message", async (message) => {
+  //if in a dm or msg from a bot, return 
+  if (!message.guild || message.author.bot) return; 
 
-//check in instagram for new posts and send them to the channel
-// if superagent is not defind then download package called superagent like this 
-// npm i superagent
-client.on('message', async message => {
-  if(message.author.bot) return;
-  if(message.content.toLowerCase() == 'check instagram') {
-    let embed = new Discord.MessageEmbed()
-    .setAuthor(message.author.username, message.author.displayAvatarURL())
-    .setDescription(`<a:yes:784463701305458708> **Checking Instagram**`)
-    .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
-    .setColor(colors.main)
-    message.channel.send(embed)
-    const { body } = await superagent
-    .get('https://www.instagram.com/p/B-_9j-jBX-U/')
-    .catch(err => {
-      console.log(err)
-    })
-    let embed2 = new Discord.MessageEmbed()
-    .setAuthor(message.author.username, message.author.displayAvatarURL())
-    .setDescription(`<a:yes:784463701305458708> **Checking Instagram**`)
-    .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
-    .setColor(colors.main)
-    .setImage(body.link)
-    message.channel.send(embed2)
+  const args = message.content.slice(prefix.length).trim().split(" ");
+  const cmd = args.shift().toLowerCase();
+
+  let toreplace_format =  
+      `**\`{videourl}\` ==> URL / LINK**` + "\n" +
+      `**\`{videotitle}\` ==> TITLE / NAME**` + "\n" +
+      `**\`{videoauthorname}\` ==> Channelauthor NAME**` + "\n" +
+      `**\`{discorduser}\` ==> ID of the LINKED USER**`;
+
+   if (cmd === "set" || cmd === "add" || cmd === "youtube") {
+      if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send({
+          embed: new Discord.MessageEmbed().setColor("RED").setDescription(":x: You are not allowed to execute this Command!")
+      })
+      let ChannelLink = args[0];
+      let DiscordChannel = message.mentions.channels.filter(c => c.guild.id == message.guild.id).first() || message.guild.channels.cache.get(args[1]);
+      let DiscordUser = message.mentions.members.filter(m => m.guild.id == message.guild.id).first()?.user || message.guild.members.cache.get(args[2])?.user;
+      let Notification = args.slice(3).join(" ") || client.YTP.options.defaults.Notification;
+      let preventDuplicates = true;
+      if (!ChannelLink || !DiscordChannel || !DiscordUser) return message.channel.send({
+          embed: new Discord.MessageEmbed().setColor("RED").setDescription(`:x: Usage: \`${prefix}set <LINK> <CHANNEL> <USER> [TEXT...]\`\n\n**Replacements:**\n` + toreplace_format)
+      })
+      //set a Channel
+      client.YTP.setChannel(ChannelLink, DiscordChannel, DiscordUser, Notification, preventDuplicates = true)
+          .then(ch => {
+              //console.log(ch) See the Responses: https://github.com/Tomato6966/discord-yt-poster/wiki/Responses
+              //send the information
+              message.channel.send({
+                  embed: new Discord.MessageEmbed().setColor("GREEN").setDescription(`I will now post Notifications for ${ch.YTchannel} (<@${ch.DiscordUser}>) in <#${ch.DiscordChannel}>\n\nThe Message:\n${ch.message}`)
+              }).then(msg => msg.react("👍"))
+          }).catch(e => {
+              //console.log(e);
+              message.channel.send(`${e.message ? e.message : e}`, {
+                  code: "js"
+              })
+          })
   }
-})
 
-
+  if (cmd === "remove" || cmd === "delete" || cmd == "del") {
+      if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send({
+          embed: new Discord.MessageEmbed().setColor("RED").setDescription(":x: You are not allowed to execute this Command!")
+      })
+      let ChannelLink = args[0];
+      if (!ChannelLink) return message.channel.send(`:x: Usage: \`${prefix}del <LINK>`)
+      //Delete a Channel
+      client.YTP.deleteChannel(message.guild.id, ChannelLink)
+          .then(ch => {
+              //console.log(ch) See the Responses: https://github.com/Tomato6966/discord-yt-poster/wiki/Responses
+              //send information message
+              message.channel.send({
+                  embed: new Discord.MessageEmbed().setColor("GREEN").setDescription(`I deleted the Settings for ${ch.deletedChannel.YTchannel} (<@${ch.deletedChannel.DiscordUser}>), posting in <#${ch.deletedChannel.DiscordChannel}>\n\nThe Message:\n${ch.deletedChannel.message}`)
+              }).then(msg => msg.react("👍"))
+          }).catch(e => {
+              //console.log(e);
+              message.channel.send(`${e.message ? e.message : e}`, {
+                  code: "js"
+              })
+          })
+  }
+});
 
 client.login(token);
