@@ -14,13 +14,16 @@ const canva = new CanvasSenpai();
 const pagination = require("discord.js-pagination");
 const ultrax = require("ultrax");
 const ms = require("ms");
-const YoutubePoster = require("discord-yt-poster");
+const antiSwearWords = require("anti-swear-words-packages-discord")
 
 const activities = [
   "http://vgim.jelgava.lv/",
   "Default Prefix : !",
   "Server : https://discord.gg/kyRsJm3tjY",
-  "🐢",
+  "📡",
+  "🤟🏽",
+  "🥓",
+  "🔒"
 ];
 
 
@@ -38,7 +41,7 @@ client.on("ready", () => {
       client.user.displayAvatarURL({ format: "png", dynamic: true, size: 1024 })
     )
     .setDescription(
-      `<a:yes:784463701305458708> **Serving ${user} users in ${guild} servers and ${channel} channels**`
+      ` **👌 Serving ${user} users in ${guild} servers and ${channel} channels**`
     )
     
     .setColor(colors.main)
@@ -79,7 +82,7 @@ console.log(blue(DevEvil));
 
     client.user.setActivity(newActivity);
   }, 10000);
-  client.YTP = new YoutubePoster(client);
+  
   //handleUploads();
 });
 
@@ -454,7 +457,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
     if(member.roles.cache.has(role)) return user.send(embed)
     let sucsses = new Discord.MessageEmbed()
     .setAuthor(user.username, user.displayAvatarURL())
-    .setDescription(`<a:yes:784463701305458708> **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
+    .setDescription(`👌 **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
     .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
     .setColor(colors.main)
 
@@ -486,7 +489,7 @@ reaction.message.guild.members.fetch(user).then(member => {
   if(member.roles.cache.has(role)) return user.send(embed)
   let sucsses = new Discord.MessageEmbed()
   .setAuthor(user.username, user.displayAvatarURL())
-  .setDescription(`<a:yes:784463701305458708> **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
+  .setDescription(`👌 **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
   .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
   .setColor(colors.main)
 
@@ -514,7 +517,7 @@ if(!role) return;
 
  let embed = new Discord.MessageEmbed()
  .setAuthor(user.username , user.displayAvatarURL())
- .setDescription(`<a:yes:784463701305458708> **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
+ .setDescription(`👌 **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
  .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
  .setColor(colors.main)
  user.send(embed)
@@ -541,7 +544,7 @@ if(!role) return;
   
  let embed = new Discord.MessageEmbed()
  .setAuthor(user.username , user.displayAvatarURL())
- .setDescription(`<a:yes:784463701305458708> **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
+ .setDescription(`👌 **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
  .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
  .setColor(colors.main)
  user.send(embed)
@@ -551,190 +554,26 @@ if(!role) return;
 }
 })
 
-//if user say let the debuging begin respond with hell yeah
-//little shit
+
 client.on('message', async message => {
   if(message.author.bot) return;
-  if(message.content.toLowerCase() == 'let the debugging begin') {
-    let embed = new Discord.MessageEmbed()
-    .setAuthor(message.author.username, message.author.displayAvatarURL())
-    .setDescription(`<a:yes:784463701305458708> **Hell Yeah!**`)
-    .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
-    .setColor(colors.main)
-    message.channel.send(embed)
-  }
-})
-
-/* 
-function handleUploads() {
-  if (db.fetch(`postedVideos`) === null) db.set(`postedVideos`, []);
-  setInterval(() => {
-      client.request.parseURL(`https://www.youtube.com/feeds/videos.xml?channel_id=${"UCJETI_xP7vLaLOxd0b7Raew"}`)
-      .then(data => {
-          if (db.fetch(`postedVideos`).includes(data.items[0].link)) return;
-          else {
-              db.set(`videoData`, data.items[0]);
-              db.push("postedVideos", data.items[0].link);
-              let parsed = db.fetch(`videoData`);
-              let channel = client.channels.cache.get(client.config.channel);
-              if (!channel) return;
-              let message = client.config.messageTemplate
-                  .replace(/{author}/g, parsed.author)
-                  .replace(/{title}/g, Discord.Util.escapeMarkdown(parsed.title))
-                  .replace(/{url}/g, parsed.link);
-              channel.send(message);
-          }
-      });
-  }, 3000);
-} */
-
-
-
-client.on('message', async message => {  
-    if(message.author.bot) return;
-    if(!message.guild) return;
-    let blacklisted = ['nigg', 'nig', 'autist', 'loh', 'padauz', 'pimp', 'pipele'];
-    let foundInText = true;
-    var embedColor = '0x5D40F2' 
-    const user = message.author.username;
-    const userid = message.author.id
-    // IF youre admin then retrun
-    if(message.member.hasPermission("ADMINISTRATOR")) return;
-    for (var i in blacklisted) {
-      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
-    }
-    if (foundInText) {
-      message.delete();
-      let warnings = db.get(`warnings_${message.guild.id}_${userid}`);
-	  
-		  if (warnings === null) {
-			db.set(`warnings_${message.guild.id}_${userid}`, 1);
-			var warningEmbed = new Discord.MessageEmbed()
-			.setColor(embedColor)
-			.setAuthor(message.author.username, message.author.avatarURL)
-			.setTitle(`**You've been warned in ${message.guild.name}**`)
-			.addField('Warned by')
-			.addField('Reason', `For useing blacklisted words`)
-			.setTimestamp();
-        user.send(warningEmbed);
-
-			
-
-			var warnSuccessfulEmbed = new Discord.MessageEmbed()
-			.setColor(embedColor)
-			.setDescription(`<a:yes:784463701305458708> **User Successfully Warned**`)
-			.addField('Warned by BOT')
-			.addField('Reason', `For useing blacklisted words`)
-			let mChannel = db.fetch(`modlog_${message.guild.id}`)
-		    if(!mChannel) return message.channel.send(warnSuccessfulEmbed)
-		    let warnChannel = message.guild.channels.cache.get(mChannel)
-		    if(!warnChannel) return;
-		    warnChannel.send(warnSuccessfulEmbed)
-		  } else if(warnings !== null) {
-			
-			db.add(`warnings_${message.guild.id}_${userid}`, 1);
-			
-			var warningEmbed = new Discord.MessageEmbed()
-			.setColor(embedColor)
-			.setAuthor(message.author.username, message.author.avatarURL)
-			.setTitle(`**You've been warned in ${message.guild.name}**`)
-			.addField('Warned by BOT')
-			.addField('Reason', `For useing blacklisted words`)
-			.setTimestamp();
-			message.author.send(warningEmbed);
-			
-			var warnSuccessfulEmbed = new Discord.MessageEmbed()
-			.setColor(embedColor)
-			.setDescription(`✅ **User Successfully Warned**`)
-			.addField('Warned by BOT')
-			.addField('Reason', `For using blacklisted words`)
-
-		    message.delete(); 
-		    let mChannel = db.fetch(`modlog_${message.guild.id}`)
-		    if(!mChannel) return message.channel.send(warnSuccessfulEmbed)
-		    let warnChannel = message.guild.channels.cache.get(mChannel)
-		    if(!warnChannel) return;
-		    warnChannel.send(warnSuccessfulEmbed)
-			// if player has 3 warnings then ban them
-      if(warnings == 5) {
-        let banEmbed = new Discord.MessageEmbed()
-        .setColor(embedColor)
-        .setAuthor(message.author.username, message.author.avatarURL)
-        .setTitle(`**You've been banned in ${message.guild.name}**`)
-        .addField('Banned by BOT')
-        .addField('Reason', `For useing blacklisted words`)
-        .setTimestamp();
-        message.author.send(banEmbed);
-        message.guild.members.ban(message.author.id, { reason: 'For useing blacklisted words' });
-      }
-			
-    }
-  }
+  if(message.member.hasPermission("ADMINISTRATOR")) return;
+  antiSwearWords(client, message, {
+      warnMSG: `<@${message.author.id}> , why are you writing this?`, 
+      // warn message option || when not then = `<@${message.author.id}> dont use swear words.` 
+      // Behind the warnMSG will be an Warn Count
+      ignoreWord: ["pipete"],
+      customWord: ["lohi", "autisms", "lohatrons", "Pipele"],
+      muteRole: "Muted",  // Name of the Role
+      muteCount: 3,        // Number when the user get muted
+      kickCount: 5,        // Number when the user get kicked
+      banCount: 10,         // Number when the user get banned
+  });                       
 });
 
-//Log Message
-client.on("message", async (message) => {
-  //if in a dm or msg from a bot, return 
-  if (!message.guild || message.author.bot) return; 
 
-  const args = message.content.slice(prefix.length).trim().split(" ");
-  const cmd = args.shift().toLowerCase();
 
-  let toreplace_format =  
-      `**\`{videourl}\` ==> URL / LINK**` + "\n" +
-      `**\`{videotitle}\` ==> TITLE / NAME**` + "\n" +
-      `**\`{videoauthorname}\` ==> Channelauthor NAME**` + "\n" +
-      `**\`{discorduser}\` ==> ID of the LINKED USER**`;
 
-   if (cmd === "set" || cmd === "add" || cmd === "youtube") {
-      if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send({
-          embed: new Discord.MessageEmbed().setColor("RED").setDescription(":x: You are not allowed to execute this Command!")
-      })
-      let ChannelLink = args[0];
-      let DiscordChannel = message.mentions.channels.filter(c => c.guild.id == message.guild.id).first() || message.guild.channels.cache.get(args[1]);
-      let DiscordUser = message.mentions.members.filter(m => m.guild.id == message.guild.id).first()?.user || message.guild.members.cache.get(args[2])?.user;
-      let Notification = args.slice(3).join(" ") || client.YTP.options.defaults.Notification;
-      let preventDuplicates = true;
-      if (!ChannelLink || !DiscordChannel || !DiscordUser) return message.channel.send({
-          embed: new Discord.MessageEmbed().setColor("RED").setDescription(`:x: Usage: \`${prefix}set <LINK> <CHANNEL> <USER> [TEXT...]\`\n\n**Replacements:**\n` + toreplace_format)
-      })
-      //set a Channel
-      client.YTP.setChannel(ChannelLink, DiscordChannel, DiscordUser, Notification, preventDuplicates = true)
-          .then(ch => {
-              //console.log(ch) See the Responses: https://github.com/Tomato6966/discord-yt-poster/wiki/Responses
-              //send the information
-              message.channel.send({
-                  embed: new Discord.MessageEmbed().setColor("GREEN").setDescription(`I will now post Notifications for ${ch.YTchannel} (<@${ch.DiscordUser}>) in <#${ch.DiscordChannel}>\n\nThe Message:\n${ch.message}`)
-              }).then(msg => msg.react("👍"))
-          }).catch(e => {
-              //console.log(e);
-              message.channel.send(`${e.message ? e.message : e}`, {
-                  code: "js"
-              })
-          })
-  }
 
-  if (cmd === "remove" || cmd === "delete" || cmd == "del") {
-      if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send({
-          embed: new Discord.MessageEmbed().setColor("RED").setDescription(":x: You are not allowed to execute this Command!")
-      })
-      let ChannelLink = args[0];
-      if (!ChannelLink) return message.channel.send(`:x: Usage: \`${prefix}del <LINK>`)
-      //Delete a Channel
-      client.YTP.deleteChannel(message.guild.id, ChannelLink)
-          .then(ch => {
-              //console.log(ch) See the Responses: https://github.com/Tomato6966/discord-yt-poster/wiki/Responses
-              //send information message
-              message.channel.send({
-                  embed: new Discord.MessageEmbed().setColor("GREEN").setDescription(`I deleted the Settings for ${ch.deletedChannel.YTchannel} (<@${ch.deletedChannel.DiscordUser}>), posting in <#${ch.deletedChannel.DiscordChannel}>\n\nThe Message:\n${ch.deletedChannel.message}`)
-              }).then(msg => msg.react("👍"))
-          }).catch(e => {
-              //console.log(e);
-              message.channel.send(`${e.message ? e.message : e}`, {
-                  code: "js"
-              })
-          })
-  }
-});
 
 client.login(token);

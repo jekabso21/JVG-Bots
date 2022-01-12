@@ -24,7 +24,7 @@ module.exports = {
 					ATTACH_FILES: true,
 					READ_MESSAGE_HISTORY: true,
 				}).then(() => {
-					message.channel.send(`<a:yes:784463701305458708> **Successfully added ${member} to ${message.channel}**`);
+					message.channel.send(`👌 **Successfully added ${member} to ${message.channel}**`);
 				});
 			}
 			catch(e) {

@@ -1,8 +1,7 @@
 {
-	"token": "OTI3OTY4ODYwNzI3MDQyMDk4.YdR8WQ.3tJbs6Rc1lnBBEpjNinDjeOVcwo",
+	"token": "OTI3OTY4ODYwNzI3MDQyMDk4.YdR8WQ.bQWv5T4y4C-uHxvRYL0fu00azBw",
 	"default_prefix": "!",
 	"youtube_api_key": "AIzaSyAO027AmK8i6b6dzOh9LFQjjetxHi4xl_o",
-	"channel": "928700057967009795", 
     "messageTemplate": "Hello @everyone, **{author}** just now uploaded a video **{title}**!\n{url}",
     "channel_id": "UCJETI_xP7vLaLOxd0b7Raew",
     "watchInterval": 30000
