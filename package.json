@@ -25,6 +25,7 @@
     "canvas-constructor": "^5.0.1",
     "canvas-senpai": "^2.0.3",
     "cheerio": "^1.0.0-rc.10",
+    "colors": "^1.4.0",
     "cpu-stat": "^2.0.1",
     "css-select": "^4.2.1",
     "dateformat": "^4.5.1",
