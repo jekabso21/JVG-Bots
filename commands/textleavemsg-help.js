@@ -7,6 +7,7 @@ module.exports = {
     name: "textleavemsg-help",
 
     async run (client, message, args) {
+		if(message.member.hasPermission("ADMINISTRATOR") || message.author.id === "73905818098180928") {
 		let prefix = await db.get(`prefix_${message.guild.id}`);
 		if(prefix === null) prefix = default_prefix;
 		const page1 = new Discord.MessageEmbed()
@@ -18,5 +19,6 @@ module.exports = {
 		.setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		 .setColor(colors.main)
 		 message.channel.send(page1)
+		}
 	}
 }

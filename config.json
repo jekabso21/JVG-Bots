@@ -1,5 +1,5 @@
 {
-	"token": "OTI3OTY4ODYwNzI3MDQyMDk4.YdR8WQ.bQWv5T4y4C-uHxvRYL0fu00azBw",
+	"token": "OTI3OTY4ODYwNzI3MDQyMDk4.YdR8WQ.pTh-7yCqjGN9e1WKc5RYqf5ZUfc",
 	"default_prefix": "!",
 	"youtube_api_key": "AIzaSyAO027AmK8i6b6dzOh9LFQjjetxHi4xl_o",
     "messageTemplate": "Hello @everyone, **{author}** just now uploaded a video **{title}**!\n{url}",

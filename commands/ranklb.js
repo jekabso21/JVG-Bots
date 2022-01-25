@@ -6,6 +6,7 @@ module.exports = {
     name: "ranklb",
 
     async run (client, message, args) {
+		
 		let lbMessage = db.all().filter(data => data.ID.startsWith(`messages_${message.guild.id}`)).sort((a, b) => b.data - a.data)
 		lbMessage.length = 10;
 		var finalLb = ""

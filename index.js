@@ -15,6 +15,7 @@ const pagination = require("discord.js-pagination");
 const ultrax = require("ultrax");
 const ms = require("ms");
 const antiSwearWords = require("anti-swear-words-packages-discord")
+const env = require("dotenv").config();
 
 const activities = [
   "http://vgim.jelgava.lv/",
@@ -70,7 +71,7 @@ client.on("ready", () => {
   |/   \__/(_______/   )_(   |/   \__/(_______)\_______/\____/
                                                                                     
                                                    
-      Retro Bot is online               
+      JVG Bot is online               
       Developer: retro#7138
 
 `;
@@ -570,6 +571,7 @@ client.on('message', async message => {
       banCount: 10,         // Number when the user get banned
   });                       
 });
+
 
 
 

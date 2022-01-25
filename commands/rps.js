@@ -4,7 +4,7 @@ const rps = ['scissors','rock', 'paper'];
 const res = ['Scissors :scissors:','Rock <:rock1:835858199021879296>', 'Paper :page_facing_up:'];
 module.exports = {
     name: "rps",
-	description: 'Play a game of rock–paper–scissors against DevEvil.xyz',
+	description: 'Play a game of rock–paper–scissors against JVĢ Bot',
 
     async run (client, message, args) {
 		let userChoice;
@@ -14,7 +14,7 @@ module.exports = {
     const botChoice = Math.floor(Math.random()*3);
     let result;
     if (userChoice === botChoice) result = '**It\'s a draw**';
-    else if (botChoice > userChoice || botChoice === 0 && userChoice === 2) result = '**DevEvil.xyz wins <a:CupGif:788458892497125436>**';
+    else if (botChoice > userChoice || botChoice === 0 && userChoice === 2) result = '**JVĢ Bot wins <a:CupGif:788458892497125436>**';
     else result = `**${message.member.displayName} wins <a:CupGif:788458892497125436>**`;
     const embed = new Discord.MessageEmbed()
       .setTitle(`${message.member.displayName} vs. DevEvilBot.xyz`)

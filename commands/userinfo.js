@@ -6,6 +6,8 @@ module.exports = {
 	name: "user",
 	
     async run (client, message, args) {
+		//if user has a Adminitrator premision if dose not have then send a message that you don't have the permission
+		if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("<a:no:784463793366761532> **You can not use this command | Permission: ADMINISTRATOR**");
 		const member = message.mentions.members.first() || message.member;
 		let target = message.mentions.users.first() || message.author
 		let inline = true

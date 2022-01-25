@@ -22,7 +22,6 @@ module.exports = {
 		 .addField('😎 General', `\`${prefix}general\``, true)
 		 .addField(':performing_arts: Reaction Role', `\`${prefix}rrhelp\``, true)
 		 .addField(':envelope_with_arrow: Ticket', `\`${prefix}ticketsetup\``, true)
-		 .addField(':pleading_face: Emotions', `\`${prefix}emo\``, true)
 		 .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		 .setColor(colors.main)
 		 

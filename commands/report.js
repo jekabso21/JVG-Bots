@@ -21,7 +21,7 @@ module.exports = {
         .addField("Reported in", `**${guild}**`)
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		.setColor(colors.main)
-		message.channel.send(`<a:yes:784463701305458708> **Your bug has been reported in the official server. It will be reviewed so please be patient**`)
+		message.channel.send(`<a:yes:784463701305458708> **Your bug has been reported to our dev!**`)
 		channel.send(embed)
 	}
 }

@@ -21,7 +21,7 @@ module.exports = {
 					try {
 						response = await sourcebin.create([
 							{
-								name: 'DevEvilBot.xyz Ticket',
+								name: 'JVĢ Ticket',
 								content: output,
 								languageId: 'text',
 							},

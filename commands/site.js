@@ -10,7 +10,7 @@ module.exports = {
 		const server = new Discord.MessageEmbed()
 		.setColor(colors.main)
 		.setTitle('Website')
-		.setDescription('**[Skolas mājas lapa](http://vgim.jelgava.lv/)**  **[Instagram](https://www.instagram.com/jvgpadome/) ** **[Facebook](https://www.facebook.com/jvgpadome/)**')
+		.setDescription('**[Skolas mājas lapa ||](http://vgim.jelgava.lv/)**   **[Instagram ](https://www.instagram.com/jvgpadome/) ** **[Facebook](https://www.facebook.com/jvgpadome/)**')
 		.setThumbnail(client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		message.channel.send(server)
 	}

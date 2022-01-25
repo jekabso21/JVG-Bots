@@ -8,6 +8,7 @@ module.exports = {
     name: "ticketsetup",
 
     async run (client, message, args) {
+		if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("<a:no:784463793366761532> **You can not use this command | Permission: ADMINISTRATOR**");
 		let prefix = await db.get(`prefix_${message.guild.id}`);
 		if(prefix === null) prefix = default_prefix;
 		const page1 = new Discord.MessageEmbed()
