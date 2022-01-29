@@ -20,7 +20,7 @@ module.exports = {
                 return newChannel.send("https://giphy.com/embed/cRBRQf8syLUyY")
     }{
         message.channel.send("You do not have the prem to do that! Your user id:")
-        console.log(message.author.id)
+        //console.log(message.author.id)
     }
     }
 }
