@@ -16,6 +16,7 @@ const ultrax = require("ultrax");
 const ms = require("ms");
 const antiSwearWords = require("anti-swear-words-packages-discord")
 const env = require("dotenv").config();
+const fetch = require('node-fetch');
 
 const activities = [
   "http://vgim.jelgava.lv/",
