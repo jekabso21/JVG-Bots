@@ -6,17 +6,14 @@ const config = require("./config.json");
 const colors = require("./colors.json");
 const { red, green, blue} = require('chalk');
 const { readdirSync } = require("fs");
-const fs = require("fs");
 const { join, format } = require("path");
 const db = require("quick.db");
 const { CanvasSenpai } = require("canvas-senpai")
 const canva = new CanvasSenpai();
-const pagination = require("discord.js-pagination");
-const ultrax = require("ultrax");
 const ms = require("ms");
 const antiSwearWords = require("anti-swear-words-packages-discord")
 const env = require("dotenv").config();
-const fetch = require('node-fetch');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const activities = [
   "http://vgim.jelgava.lv/",
