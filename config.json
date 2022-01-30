@@ -1,8 +1,13 @@
 {
-	"token": "OTI3OTY4ODYwNzI3MDQyMDk4.YdR8WQ.pTh-7yCqjGN9e1WKc5RYqf5ZUfc",
-	"default_prefix": "!",
-	"youtube_api_key": "AIzaSyAO027AmK8i6b6dzOh9LFQjjetxHi4xl_o",
-    "messageTemplate": "Hello @everyone, **{author}** just now uploaded a video **{title}**!\n{url}",
-    "channel_id": "UCJETI_xP7vLaLOxd0b7Raew",
-    "watchInterval": 30000
+
+    "OWNER_ID":"533315728640573440",
+    "BOT_TOKEN": "OTI4MjM1MjYwNTIzNzMzMDQ0.YdV0cw.QTF0nnWaL_ZbOZdjHg3aH52Y3DY",
+    "tenorAPI":"ZEEELJXAFQBN",
+    "DEFAULT_PREFIX":"!",
+    "mongoPass": "mongodb+srv://discord-bot:vZw7kJ3E87GybyW@cluster0.qcggz.mongodb.net/Cluster0?retryWrites=true&w=majority",
+    "ERROR_LOGS_CHANNEL": "928700058231242754",
+    "ALEXFLIPNOTE_API_KEY":"",
+    "YT_COOKIE": "248731808507-e8393mv34mgrp92hf1r7p8njekt5mdn7.apps.googleusercontent.com"
+    
 }
+
