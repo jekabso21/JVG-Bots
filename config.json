@@ -1,7 +1,7 @@
 {
 
     "OWNER_ID":"533315728640573440",
-    "BOT_TOKEN": "OTI4MjM1MjYwNTIzNzMzMDQ0.YdV0cw.QTF0nnWaL_ZbOZdjHg3aH52Y3DY",
+    "BOT_TOKEN": "OTI3OTY4ODYwNzI3MDQyMDk4.YdR8WQ.pTh-7yCqjGN9e1WKc5RYqf5ZUfc",
     "tenorAPI":"ZEEELJXAFQBN",
     "DEFAULT_PREFIX":"!",
     "mongoPass": "mongodb+srv://discord-bot:vZw7kJ3E87GybyW@cluster0.qcggz.mongodb.net/Cluster0?retryWrites=true&w=majority",
