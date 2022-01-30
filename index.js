@@ -2,7 +2,7 @@ const fs = require("fs");
 const chalk = require("chalk");
 const antiSwearWords = require("anti-swear-words-packages-discord")
 const { Client, Collection, Intents, MessageEmbed } = require("discord.js");
-const { DEFAULT_PREFIX, BOT_TOKEN, ERROR_LOGS_CHANNEL, YT_COOKIE } = require("./config.json");
+const { DEFAULT_PREFIX, ERROR_LOGS_CHANNEL, YT_COOKIE } = require("./config.json");
 const { loadCommands } = require("./handler/loadCommands");
 const { loadEvents } = require("./handler/loadEvents");
 const { loadSlashCommands } = require("./handler/loadSlashCommands")
@@ -10,6 +10,7 @@ const { loadPlayerEvents } = require("./handler/loadPlayerEvents");
 const { DiscordTogether } = require('discord-together')
 const { Player } = require('discord-player')
 const Enmap = require("enmap")
+const env = require("dotenv").config();
 
 
 //if is error Class extends value undefined is not a constructor or null is not an object error then you need to add the following line to fix it. At line number: 1 in file: index.js
@@ -109,6 +110,7 @@ client.on('message', async message => {
   });
 });
 
-client.login(BOT_TOKEN).then(() => {
+
+client.login(process.env.DISCORD_TOKEN).then(() => {
   console.log(` Successfully logged in as: ${client.user.username}#${client.user.discriminator} `);
 });
