@@ -1,176 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a210635-14ba-48e4-9acb-5eac96eadefc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SECURITY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/colors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/4k.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/8ball.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/about.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/add-xp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/add.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/addmoney.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/aki.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ascii.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/avatar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/balance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ban.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/binary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/buy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/changemymind.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/channelinfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/clac.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/clear.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/close.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/coinflip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/daily.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/decode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/dice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/disablemodlog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/disablerankch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/economyhelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/embed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/emotions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/funhelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ga-reroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/gamble.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/game.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/generalhelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/github.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/giveaway.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/giveawayhelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/help.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/howgay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/hug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/idban.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/infohelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/jail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/joke.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/kick.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/kill.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/kiss.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/leave-help.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/leavemsghelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/lock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/lottery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/love.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/members.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/meme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/modhelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/modloghelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/moneyleaderboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/monthly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/nuke.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/open.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/pat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/pet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/phcomment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ping.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/rank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ranklb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ranksetup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/reminder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/remove-money.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/remove.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/removerole.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetleave.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetleavemsg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resettextleave-msg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resettextleave.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resettextwlc-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resettextwlc-msg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetwarns.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetwlc-embed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetwlc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetwlcimg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetwlcmsg-embed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/resetwlcmsg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/restart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/rip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/rob.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/roleall.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/roleinfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/roll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/roulette.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/rps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/rr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/rrdelete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/rrhelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/say.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/serveravatar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/serverinfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setleave.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setleavemsg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setmodlog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setnickname.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setprefix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setrankbg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setrankchannel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settextleave-msg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settextleave.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settextwlc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settextwlcmsg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setwelcome.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setwlc-embed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setwlcimage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setwlcmessage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/setwlcmsg-embed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/shop.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/site.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/slowmode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/suggestion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/svpoints.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/tempmute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/text-channel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/textleavemsg-help.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/textwlcmsg-help.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ticket-message.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ticket.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ticketsetup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/transcript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/transfer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/translate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/trash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/unban.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/unlock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/unmute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/uptime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/userinfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/vote.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/warn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/warnings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/weather.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/webhook.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/weekly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/wlcembedmsghelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/wlchelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/wlcmsghelp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/work.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/would-you-rather.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/enmap.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/data/enmap.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/enmap.sqlite-shm" beforeDir="false" afterPath="$PROJECT_DIR$/data/enmap.sqlite-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/enmap.sqlite-wal" beforeDir="false" afterPath="$PROJECT_DIR$/data/enmap.sqlite-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giveaways.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    <list default="true" id="1725db9a-6cab-4b7e-bd2c-250e2cd739fd" name="Changes" comment="Reworked mute function, added new word filtering package and modifide for discord timeout function, few toches for info category.">
+      <change afterPath="$PROJECT_DIR$/Commands/Mod/removewarn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/json.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/json.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages/wyr/would-you-rather.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/anti-swear-words-packages-discord/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,46 +30,44 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="c87181d6-6741-4da8-9712-962878b56308" />
-        <option name="url" value="https://github.com/Simpleboy353/REAPER-2.0.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="24Ps29MFExMjnFfStjtqgOGIug0" />
+  <component name="ProjectId" id="24Q8mVHoxdsKcbVsv3LXzn17rFD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1a210635-14ba-48e4-9acb-5eac96eadefc" name="Changes" comment="" />
-      <created>1643543346492</created>
+      <changelist id="1725db9a-6cab-4b7e-bd2c-250e2cd739fd" name="Changes" comment="" />
+      <created>1643551610047</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1643543346492</updated>
-      <workItem from="1643543348407" duration="1115000" />
-      <workItem from="1643544491157" duration="1310000" />
-      <workItem from="1643548005833" duration="1493000" />
-      <workItem from="1643549606716" duration="47000" />
-      <workItem from="1643549681958" duration="42000" />
+      <updated>1643551610047</updated>
+      <workItem from="1643551612046" duration="7646000" />
     </task>
+    <task id="LOCAL-00001" summary="Reworked mute function, added new word filtering package and modifide for discord timeout function, few toches for info category.">
+      <created>1643555988908</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643555988908</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reworked mute function, added new word filtering package and modifide for discord timeout function, few toches for info category." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked mute function, added new word filtering package and modifide for discord timeout function, few toches for info category." />
   </component>
 </project>
