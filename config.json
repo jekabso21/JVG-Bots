@@ -4,7 +4,7 @@
     "BOT_TOKEN": "OTI3OTY4ODYwNzI3MDQyMDk4.YdR8WQ.pTh-7yCqjGN9e1WKc5RYqf5ZUfc",
     "tenorAPI":"ZEEELJXAFQBN",
     "DEFAULT_PREFIX":"!",
-    "mongoPass": "mongodb+srv://discord-bot:vZw7kJ3E87GybyW@cluster0.qcggz.mongodb.net/Cluster0?retryWrites=true&w=majority",
+    "mongoPass": "mongodb+srv://JVG-Bot:AC64DH1fVjaps2ia@cluster0.qcggz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     "ERROR_LOGS_CHANNEL": "928700058231242754",
     "ALEXFLIPNOTE_API_KEY":"",
     "YT_COOKIE": "248731808507-e8393mv34mgrp92hf1r7p8njekt5mdn7.apps.googleusercontent.com"

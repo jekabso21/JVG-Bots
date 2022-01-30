@@ -1,6 +1,6 @@
 const fs = require("fs");
 const chalk = require("chalk");
-
+const antiSwearWords = require("anti-swear-words-packages-discord")
 const { Client, Collection, Intents, MessageEmbed } = require("discord.js");
 const { DEFAULT_PREFIX, BOT_TOKEN, ERROR_LOGS_CHANNEL, YT_COOKIE } = require("./config.json");
 const { loadCommands } = require("./handler/loadCommands");
@@ -95,6 +95,20 @@ process.on("unhandledRejection", (reason, promise) => {
   .setColor("RED")
   client.channels.cache.get(ERROR_LOGS_CHANNEL).send({ embeds: [rejectionembed] })
 });
+
+client.on('message', async message => {
+  antiSwearWords(client, message, {
+    warnMSG: `<@${message.author.id}> , why are you writing this?`,
+    // warn message option || when not then = `<@${message.author.id}> dont use swear words.`
+    // Behind the warnMSG will be an Warn Count
+    ignoreWord: ["ignoreThis", "andIgnoreThis", "alsoIgnoreThis"],
+    customWord: ["aCustomWord", "anOtherCustomWord"],
+    muteCount: 4,        // Number when the user get muted
+    kickCount: 8,        // Number when the user get kicked
+    banCount: 12,         // Number when the user get banned
+  });
+});
+
 client.login(BOT_TOKEN).then(() => {
   console.log(` Successfully logged in as: ${client.user.username}#${client.user.discriminator} `);
 });
