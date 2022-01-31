@@ -1,7 +1,6 @@
 const fs = require("fs");
-const chalk = require("chalk");
 const antiSwearWords = require("anti-swear-words-packages-discord")
-const { Client, Collection, Intents, MessageEmbed } = require("discord.js");
+const { Client, Collection, Intents, MessageEmbed, MESSAGE, CHANNEL, REACTION} = require("discord.js");
 const { DEFAULT_PREFIX, ERROR_LOGS_CHANNEL, YT_COOKIE } = require("./config.json");
 const { loadCommands } = require("./handler/loadCommands");
 const { loadEvents } = require("./handler/loadEvents");
@@ -11,9 +10,8 @@ const { DiscordTogether } = require('discord-together')
 const { Player } = require('discord-player')
 const Enmap = require("enmap")
 const env = require("dotenv").config();
+const db = require("quick.db")
 
-
-//if is error Class extends value undefined is not a constructor or null is not an object error then you need to add the following line to fix it. At line number: 1 in file: index.js
 const client = new Client({
   allowedMentions: { parse: ["users", "roles"] },
   intents: [
@@ -109,6 +107,58 @@ client.on('message', async message => {
     banCount: 12,         // Number when the user get banned
   });
 });
+
+
+
+client.on('messageReactionAdd', async (reaction, user) => {
+  if(user.partial) await user.fetch();
+  if(reaction.partial) await reaction.fetch();
+  if(reaction.message.partial) await reaction.message.fetch();
+  if(user.bot) return;
+  let emote = await db.get(`emoteid_${reaction.message.guild.id}_${reaction.emoji.name}`)
+  if(!emote) return;
+  let messageid = await db.get(`message_${reaction.message.guild.id}_${reaction.emoji.name}`)
+  if(!messageid) return;
+  let role = await db.get(`role_${reaction.message.guild.id}_${reaction.emoji.name}`)
+  if(!role) return;
+
+  if(reaction.message.id == messageid && reaction.emoji.name == `${emote}`) {
+    reaction.message.guild.members.fetch(user).then(member => {
+      if(member.roles.cache.has(role)) return;
+
+      member.roles.add(role).catch(err => {
+        console.log(err)
+      })
+
+
+    })
+  }
+})
+
+//if error is missing permission then add the permission to the bot
+
+client.on('messageReactionRemove', async (reaction, user) => {
+  console.log(user.username)
+  if(user.partial) await user.fetch();
+  if(reaction.partial) await reaction.fetch();
+  if(reaction.message.partial) await reaction.message.fetch();
+  if(user.bot) return;
+  let emote = await db.get(`emoteid_${reaction.message.guild.id}_${reaction.emoji.name}`)
+  if(!emote) return;
+  let messageid = await db.get(`message_${reaction.message.guild.id}_${reaction.emoji.name}`)
+  if(!messageid) return;
+  let role = await db.get(`role_${reaction.message.guild.id}_${reaction.emoji.name}`)
+  if(!role) return;
+  if(reaction.message.id == messageid && reaction.emoji.name == `${emote}`) {
+    reaction.message.guild.members.fetch(user).then(member => {
+      member.roles.remove(role)
+
+    })
+  }
+})
+
+
+
 
 
 client.login(process.env.DISCORD_TOKEN).then(() => {
