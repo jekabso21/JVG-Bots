@@ -21,7 +21,7 @@ module.exports = {
         }
 
 
-        let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
+        let warnings = db.get(`warnings_${message.guild.id}_${user.id}`)
 
         if (warnings === null) {
             return message.channel.send(`${message.mentions.users.first().username} don\'t have any warnings**`);

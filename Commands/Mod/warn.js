@@ -44,10 +44,12 @@ module.exports = {
         message.react('✅')
 
         let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
+        console.log(message.guild.id, user.id);
 
         if (warnings === null) {
+            console.log(message.guild.id, user.id);
             db.set(`warnings_${message.guild.id}_${user.id}`, 1);
-
+            console.log(warnings)
 
 
             var warningEmbed = new MessageEmbed()
